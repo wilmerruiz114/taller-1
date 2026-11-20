@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#092755" />
+    <meta
+      name="description"
+      content="Iniciar Sesión en la demostración académica TechEmpresa Clientes."
+    />
+    <title>Iniciar Sesión | TechEmpresa Clientes</title>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/themes.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/storage.js"></script>
+    <script defer src="assets/js/ui.js"></script>
+    <script defer src="assets/js/auth-forms.js"></script>
+  </head>
+  <body class="auth-page" data-page="login">
+    <div class="auth-container">
+      <div class="auth-top">
+        <span>PORTAL DE CLIENTES</span
+        ><label class="theme-picker"
+          ><span class="sr-only">Tema de apariencia</span
+          ><span aria-hidden="true">◐</span
+          ><select id="themeSelect" aria-label="Tema de apariencia">
+            <option value="dark">Negro</option>
+            <option value="light">Blanco</option>
+            <option value="system">Sistema</option>
+          </select></label
+        >
+      </div>
+      <main class="auth-card">
+        <aside class="auth-brand" aria-label="TechEmpresa">
+          <div class="auth-brand-copy">
+            <img
+              class="auth-mark"
+              src="assets/img/brand-mark.svg"
+              width="76"
+              height="76"
+              alt=""
+            />
+            <h2>TechEmpresa</h2>
+            <p>Innovación y tecnología<br />para tu negocio</p>
+          </div>
+          <img
+            class="auth-building"
+            src="assets/img/office-building.jpg"
+            alt=""
+          />
+          <div class="auth-brand-shade" aria-hidden="true"></div>
+        </aside>
+        <section class="auth-form-panel" aria-labelledby="authTitle">
+          <div class="auth-form-content">
+            <h1 id="authTitle">Iniciar Sesión</h1>
+            <p class="auth-subtitle">Ingresa a tu cuenta empresarial</p>
+            <div
+              class="auth-notice"
+              id="authNotice"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+            <form id="loginForm" class="auth-form">
+              <label class="sr-only" for="loginEmail">Correo electrónico</label>
+              <div class="auth-input-group">
+                <svg
+                  class="auth-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 5h16v14H4z" />
+                  <path d="m4 6 8 7 8-7" /></svg
+                ><input
+                  id="loginEmail"
+                  name="email"
+                  type="email"
+                  placeholder="Correo electrónico"
+                  autocomplete="email"
+                  maxlength="190"
+                  required
+                />
+              </div>
+              <label class="sr-only" for="loginPassword">Contraseña</label>
+              <div class="auth-input-group">
+                <svg
+                  class="auth-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="5" y="10" width="14" height="11" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                  <path d="M12 14v3" /></svg
+                ><input
+                  id="loginPassword"
+                  name="password"
+                  type="password"
+                  placeholder="Contraseña"
+                  autocomplete="current-password"
+                  maxlength="256"
+                  required
+                /><button
+                  class="password-toggle"
+                  type="button"
+                  data-toggle-password="loginPassword"
+                  aria-label="Mostrar contraseña"
+                  aria-pressed="false"
+                >
+                  <svg
+                    class="auth-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="auth-options">
+                <label class="check-label"
+                  ><input type="checkbox" name="remember" /> Recordar
+                  sesión</label
+                ><button class="auth-forgot" id="forgotPassword" type="button">
+                  ¿Olvidaste tu contraseña?
+                </button>
+              </div>
+              <button class="button auth-submit" type="submit">
+                <svg
+                  class="auth-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M10 4h10v16H10M3 12h12m-4-4 4 4-4 4" /></svg
+                >Iniciar Sesión
+              </button>
+            </form>
+            <div class="auth-divider" aria-hidden="true"><span>o</span></div>
+            <div class="auth-switch">
+              <span>¿No tienes una cuenta?</span
+              ><a
+                class="button secondary auth-register-link"
+                href="registro.html"
+                ><svg
+                  class="auth-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M2 21v-2a7 7 0 0 1 14 0v2m4-13v8m-4-4h8" /></svg
+                >Registrarse</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+      <p class="auth-demo-note">
+        Demostración académica · acceso local de prueba
+      </p>
+    </div>
+    <dialog id="recoveryDialog" aria-labelledby="recoveryTitle">
+      <div class="dialog-heading">
+        <h2 id="recoveryTitle">Recuperar acceso</h2>
+        <form method="dialog">
+          <button class="icon-button" aria-label="Cerrar" type="submit">
+            ×
+          </button>
+        </form>
+      </div>
+      <p>
+        Esta demostración no envía correos de recuperación. Puedes registrar
+        otra cuenta de prueba con un correo diferente.
+      </p>
+      <div class="form-actions">
+        <a class="button" href="registro.html">Crear cuenta de prueba</a>
+      </div>
+    </dialog>
+  </body>
+</html>

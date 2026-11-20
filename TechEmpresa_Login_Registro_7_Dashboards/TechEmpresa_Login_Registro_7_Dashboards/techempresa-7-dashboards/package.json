@@ -1,0 +1,15 @@
+{
+  "name": "techempresa-7-dashboards",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Siete pantallas del SVG en HTML, CSS y JavaScript sin compilación ni backend.",
+  "scripts": {
+    "test": "playwright test",
+    "format": "prettier --write *.html assets/css assets/js tests playwright.config.cjs README.md package.json",
+    "format:check": "prettier --check *.html assets/css assets/js tests playwright.config.cjs README.md package.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "prettier": "3.10.1"
+  }
+}

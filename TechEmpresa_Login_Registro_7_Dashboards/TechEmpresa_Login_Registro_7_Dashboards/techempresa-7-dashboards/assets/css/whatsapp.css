@@ -1,0 +1,40 @@
+/* Contacto directo: el enlace abre WhatsApp con un mensaje preparado. */
+.whatsapp-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #159946;
+  border-radius: 50%;
+  background: #25d366;
+  color: #062f17;
+  font-size: 30px;
+  line-height: 1;
+  box-shadow: 0 6px 22px var(--shadow);
+}
+.whatsapp-button:hover {
+  background: #20bd5a;
+}
+.whatsapp-button:focus-visible {
+  outline: 3px solid var(--link);
+  outline-offset: 4px;
+}
+.toast {
+  bottom: 98px;
+}
+body.sidebar-open .whatsapp-button {
+  visibility: hidden;
+}
+@media (max-width: 720px) {
+  .whatsapp-button {
+    right: 16px;
+    bottom: 16px;
+  }
+  .content {
+    padding-bottom: 96px;
+  }
+}

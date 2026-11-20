@@ -1,0 +1,172 @@
+/* Blanco: colores semánticos compartidos por las siete páginas. */
+:root {
+  color-scheme: light;
+  --text: #17212f;
+  --page: #f5f6f8;
+  --surface: #ffffff;
+  --soft: #eef2f7;
+  --muted: #536273;
+  --line: #dce2eb;
+  --link: #075fc9;
+  --sidebar-bg: #f8fafc;
+  --sidebar-fg: #17212f;
+  --sidebar-hover: #e8edf5;
+  --button-hover: #0058d0;
+  --hover-bg: #e5edfa;
+  --icon-bg: #dceaff;
+  --status-bg: #edf1f6;
+  --status-fg: #526477;
+  --done-bg: #e1f7f2;
+  --done-fg: #007b6e;
+  --route-bg: #e7f0ff;
+  --route-fg: #075ec9;
+  --pending-bg: #fff1e2;
+  --pending-fg: #9b4d09;
+  --promotion-bg: #f0e9ff;
+  --promotion-fg: #6941ad;
+  --warning-bg: #fff4d9;
+  --warning-fg: #785708;
+  --error-bg: #ffebe9;
+  --error-fg: #99392d;
+  --shadow: #00000022;
+  --overlay: #10152288;
+  --toast-bg: #17212f;
+  --toast-fg: #ffffff;
+}
+
+/* Negro: elección independiente de los otros dos temas. */
+:root[data-color-mode='dark'] {
+  color-scheme: dark;
+  --text: #f3f4f6;
+  --page: #0c0d10;
+  --surface: #18191d;
+  --soft: #23252c;
+  --muted: #b3bac8;
+  --line: #343741;
+  --link: #94beff;
+  --sidebar-bg: #101114;
+  --sidebar-fg: #f3f4f6;
+  --sidebar-hover: #292c34;
+  --blue: #2563eb;
+  --button-hover: #1d4ed8;
+  --hover-bg: #2b2f39;
+  --icon-bg: #223754;
+  --status-bg: #2c3039;
+  --status-fg: #c9d0de;
+  --done-bg: #123a32;
+  --done-fg: #71e2c2;
+  --route-bg: #1a3154;
+  --route-fg: #9ac1ff;
+  --pending-bg: #442d16;
+  --pending-fg: #ffca83;
+  --promotion-bg: #34234e;
+  --promotion-fg: #d1a9ff;
+  --warning-bg: #40341a;
+  --warning-fg: #f4d78f;
+  --error-bg: #4a2226;
+  --error-fg: #ffb4b0;
+  --shadow: #00000077;
+  --overlay: #000000aa;
+  --toast-bg: #e4e8ef;
+  --toast-fg: #101114;
+}
+
+/* Sistema: paleta de TechEmpresa solicitada, independiente del tema del equipo. */
+:root[data-theme='system'] {
+  color-scheme: light;
+  --navy: #092755;
+  --blue: #0869e8;
+  --teal: #04ae9e;
+  --orange: #ffa244;
+  --purple: #8052eb;
+  --page: #edf4ff;
+  --surface: #ffffff;
+  --soft: #f1f6ff;
+  --muted: #667fa4;
+  --line: #e3edf9;
+  --sidebar: 240px;
+  --text: var(--navy);
+  --link: var(--blue);
+  --sidebar-bg: var(--navy);
+  --sidebar-fg: #ffffff;
+  --sidebar-hover: #194378;
+  --hover-bg: #e7f0ff;
+  --toast-bg: var(--navy);
+  --toast-fg: #ffffff;
+}
+:root[data-theme='system'] .logout small {
+  color: #bfd4f1;
+}
+
+.nav a.active {
+  color: #ffffff;
+}
+.sidebar {
+  border-right: 1px solid var(--line);
+}
+.header {
+  border-bottom: 1px solid var(--line);
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+.theme-picker > span[aria-hidden] {
+  font-size: 21px;
+}
+.theme-picker select {
+  width: 103px;
+  margin: 0;
+  padding: 8px;
+  font-size: 13px;
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--line);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 720px) {
+  .header-right {
+    gap: 10px;
+  }
+  .theme-picker {
+    gap: 0;
+  }
+  .theme-picker > span[aria-hidden] {
+    display: none;
+  }
+  .theme-picker select {
+    width: 91px;
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+  .account {
+    max-width: calc(100vw - 180px);
+  }
+  .account strong {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .demo-badge {
+    display: none;
+  }
+}
